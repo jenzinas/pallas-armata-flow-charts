@@ -1,0 +1,74 @@
+digraph pallas_armata_flowchart {
+
+	rankdir=LR;
+
+antiStringerIn1 [label="Before Contact\nLift point over rapier\nto your inside and\nthrust Secunde" fillcolor=blue]
+antiStringerIn2 [label="Before Contact\nCaver under Rapier\nand thrust Secunde" fillcolor=blue]
+antiStringerIn3 [label="Before Contact\nFinda Within\nCaver under\nand thrust Quarte" fillcolor=blue]
+
+antiStringerOut1 [label="Before Contact\nLift point over rapier\nto your outside and\nthrust Quarte" fillcolor=blue]
+antiStringerOut2 [label="Before Contact\nCaver under Rapier\nand thrust Quarte" fillcolor=blue]
+antiStringerOut3 [label="Before Contact\nFinda Without\nCaver under\nand thrust Quarte" fillcolor=blue]
+antiStringerOut4a [label="Caver from left to right\nbattiere inside\nThrust Quarte" fillcolor=blue]
+antiStringerOut4b [label="Caver from left to right\nbattiere inside\nThrust Quarte" fillcolor=blue]
+antiStringerOut4c [label="Thrust Contra-Tempo" fillcolor=blue]
+antiStringerOut4->followDown
+antiStringerOut4 [label="Let the point sink downward\nby degrees" fillcolor=blue]
+antiStringerOut4->thrust
+antiStringerOut5a [label="Battiere Inside\nThrust Quarte" fillcolor=blue]
+antiStringerOut5b [label="Passere Inside Secunde" fillcolor=blue]
+antiStringerOut5->followLeft
+antiStringerOut5 [label="Caver slowly turning to Secunde" fillcolor=blue]
+antiStringerOut5->thrustWithin
+antiStringerOut6a [label="Caver and thrust Quarte" fillcolor=blue]
+antiStringerOut6b [label="Thrust Forte on Foible" fillcolor=blue]
+antiStringerOut6 [label="Step back with the rear leg\nall weight on the real leg\nArm in Secunde\nRapier to the Left" fillcolor=blue]
+antiStringerOut6->stringerWithout2
+centerGuard  [label="Center Guard" fillcolor=red]
+centerGuard->stringerEither
+changeIn2Outside [label="Move between Inside and outside guard" fillcolor=red]
+changeIn2Outside->stringerFinda 
+followDown->antiStringerOut4a 
+followDown->antiStringerOut4b
+followDown [label="follow the rapier down" fillcolor=red]
+followLeft->antiStringerOut5b 
+followLeft [label="Follow point to left side" fillcolor=red]
+onGuard->centerGuard
+onGuard->changeIn2Outside
+onGuard [label="On Guard" fillcolor=blue]      // Starting position
+onGuard->openWithin
+onGuard->openWithout
+onGuard->stringerWithin
+onGuard->stringerWithout
+openWithin [label="Open Within" fillcolor=red]
+openWithin->stringerIn
+openWithout [label="Open Without" fillcolor=red] 
+openWithout->stringerOut 
+parerAttack [label="Parer Attack" fillcolor=red]
+parerAttack->stringerCaver 
+stringerWithout->antiStringerOut2 
+stringerCaver [label="Caver to open side\nand Stringer on open side" fillcolor=blue]
+stringerEither [label="Stringer to Either Side\nIt is all one" fillcolor=blue]  // node E
+stringerFinda [label="Make a Finda" fillcolor=blue]  // node E
+stringerFinda->parerAttack
+stringerIn [label="Stringer Within" fillcolor=blue]  // node E
+stringerOut [label="Stringer Without" fillcolor=blue]  // node E
+stringerWithin->antiStringerIn1 
+stringerWithin->antiStringerIn2
+stringerWithin->antiStringerIn3
+stringerWithin [label="Stringer Within" fillcolor=red]
+
+stringerWithout->antiStringerOut1 
+stringerWithout->antiStringerOut3
+stringerWithout->antiStringerOut4
+stringerWithout->antiStringerOut5
+stringerWithout->antiStringerOut6
+stringerWithout2->antiStringerOut6a
+stringerWithout2->antiStringerOut6b 
+stringerWithout [label="Stringer Without" fillcolor=red]
+stringerWithout2 [label="Stringer Without" fillcolor=red]
+thrust->antiStringerOut4c
+thrust  [label="Thrust" fillcolor=red]
+thrustWithin->antiStringerOut5a 
+thrustWithin [label="Thrust Within" fillcolor=red]
+}

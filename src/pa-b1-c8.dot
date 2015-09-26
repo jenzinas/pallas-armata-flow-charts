@@ -1,0 +1,45 @@
+digraph pallas_armata_flowchart {
+
+	rankdir=LR;
+
+onGuard [label="On Guard" fillcolor=blue]
+thrustQuarte [label="Thrust Quarte at his right breast\nat the inside of his weapon" fillcolor=blue]
+parere [label="Parere secunde down to the outside\nchange secunde to quarte" fillcolor=blue]
+battiere [label="Battiere within upon the rapier" fillcolor=blue] 
+
+forteAttackWithin[label="Attack within, against the forte"  fillcolor=red]
+onGuard->forteAttackWithin
+forteAttackWithin->parere 
+noCaverP [label="Does not caver the parere"  fillcolor=red]
+parere->noCaverP
+noCaverP->thrustQuarte
+forteAttackWithin->battiere 
+noCaver  [label="Does not caver the battiere"  fillcolor=red]
+battiere->noCaver
+noCaver->thrustQuarte
+
+cavere [label="Cavere and thrust secunde over his foible" fillcolor=blue]
+cavereAndPassere [label="Caver and passere\nunder his weapon or arm in secunde" fillcolor=blue]
+circleParere [label="drop the tip into a secunde\noutside his rapier\nparere without" fillcolor=blue]
+cpPassere [label="passere with a secunde without\nat his right thigh" fillcolor=blue]
+cpLongThrust [label="thrust a long thrust in secunde\nover right arm to right breast" fillcolor=blue]
+
+foibleThrustWithin  [label="Thrust within, against the foible"  fillcolor=red]
+onGuard->foibleThrustWithin
+foibleThrustWithin->cavere
+foibleThrustWithin->cavereAndPassere
+foibleThrustWithin->circleParere
+noCaver2  [label="Does not cavere parere"  fillcolor=red]
+circleParere->noCaver2 
+noCaver2->cpPassere
+noCaver2->cpLongThrust
+
+complex [label="shift body weight back to left leg\ndo ceeding parere\nlong thrust in Quarte to breast" fillcolor=blue]
+foibleThrustWithin->complex
+
+low [label="parere with low quarte\nthrust Quarte at right thigh" fillcolor=blue]
+lowWithin [label="Thrust low within"  fillcolor=red]
+onGuard->lowWithin
+lowWithin->low 
+
+}

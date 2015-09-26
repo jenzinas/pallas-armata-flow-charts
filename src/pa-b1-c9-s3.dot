@@ -1,0 +1,51 @@
+digraph pallas_armata_flowchart {
+
+rankdir=LR; 
+//chapter 9, section 3, against the Quarte
+
+onGuard [label="On Guard"]      // Starting position
+
+pointInSecunde [label="In Secunde, point your tip at the hilt"]
+voltere [label="Voltere with thy Quarte\nat his right breast within"]
+onGuard->pointInSecunde [label="In Quart, the point looking to the right side out"]
+pointInSecunde->voltere [label="Thrust within"]
+
+findaOutside [label="make a finda outside\ntowards the right breast\nfrom high secunde with\nstretched arm"]
+onGuard->findaOutside [label="lie with a stretched arm\npoint upright\nas it were in a Triangle"]
+thrustQuarte [label="caver to the inside into Quarte\nthrust to the right breast"]
+findaOutside->thrustQuarte [label="put it by to the right side out"]
+
+findaWithin [label="make a finda at his face"]
+onGuard->findaWithin [label="lie with a stretched arm\npoint upright\nas it were in a Triangle"]
+caverReversi [label="caver under his blade and\nthrust secunde or reversi\noutside, over his right arm"]
+findaWithin->caverReversi [label="catch after the finda to the your left"]
+
+eyeThrust [label="circle his blade then\nthrust secunde outside\nat his right eye"]
+onGuard->eyeThrust [label="lie with a stretched arm\npoint upright\nas it were in a Triangle"]
+sinkunder [label="let thy point sink in under his right arm\n bow thy body and pass behind him\n under his right arm"]
+eyeThrust->sinkunder [label="put by the point upwards"]
+
+thrustOutside [label="thrust clost to the outside, over the right arm"]
+onGuard->thrustOutside [label="hold the left hand behind the hilt\nwith which to parry"]
+liftAndThrustSecunde [label=" lift the point of thy Rapier\nover his left hand towards thy right side out\nthrust him with a Secunde over his left hand and right arm."]
+thrustOutside->liftAndThrustSecunde [label="parry with the left hand over the right arm"]
+
+dropAndThrust [label="drop the tip under his left arm\nthrust secunde over the right"]
+thrustOutside->dropAndThrust [label="parry with the left hand over the right arm"]
+
+thrustInside [label="Thrust inside with Quarte"]
+onGuard->thrustInside [label="hold the left hand behind the hilt\nwith which to parry"]
+liftAndThrustInside [label="circle over the hand\nthrust quarte inside his rapier"]
+thrustInside->liftAndThrustInside [label="parry with the hand to the left side out"]
+
+caverAndThrustInside [label="cavere right to left under the hand\nthrust quarte inside his rapier"]
+thrustInside->caverAndThrustInside [label="parry with the hand to the left side out"]
+
+caverAndThrustInsideAgain [label="cavere under the hand\nthrust quarte inside his rapier"]
+thrustInside->caverAndThrustInsideAgain [label="parry with the hand under the rapier"]
+
+sinkAndThrustInside [label="sink under the hand\nthrust quarte to the belly"]
+thrustInside->sinkAndThrustInside [label="parry with the hand to the left side out"]
+
+
+}

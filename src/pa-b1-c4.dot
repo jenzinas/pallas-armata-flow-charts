@@ -1,0 +1,74 @@
+digraph pallas_armata_flowchart {
+
+	rankdir=LR;
+
+onGuard [label="On Guard" fillcolor=blue]      // Starting position
+stringerIn [label="Stringer Within" fillcolor=blue]  // node E
+extendInThird [label="Counterthrust Tertz\nover right arm" fillcolor=blue]
+passiere [label="Turn Tertz into Prime\nthrust at right breast" fillcolor=blue]
+
+openWithin [label="Open within" fillcolor=red] // edge B->E
+onGuard->openWithin
+openWithin->stringerIn 
+thrustsWithout [label="Thrusts Without" fillcolor=red]
+stringerIn->thrustsWithout
+thrustsWithout->extendInThird
+putByRight [label="Put By \nto the Right Side" fillcolor=red]
+extendInThird->putByRight
+putByRight->passiere
+
+parryQuartWithoutThrust [label="Parry Quart Without\nQuart to Second\nThrust at right breast" fillcolor=blue]
+thrustWithoutOverPrime [label="Thrust without over Prime" fillcolor=red]
+stringerIn->thrustWithoutOverPrime
+thrustWithoutOverPrime->parryQuartWithoutThrust
+
+parryQuartWithoutPass [label="Parry Quart Without\nQuart to Second\nPassere" fillcolor=blue]
+thrustWithoutOverPrime->parryQuartWithoutPass
+
+thrustWithout [label="Thrust Second\nOver Right Arm" fillcolor=blue]
+openWithout  [label="Open without" fillcolor=red] // edge B->E
+openWithout->thrustWithout
+
+thrustIn [label="Thrust Quarte Within" fillcolor=blue]
+openWithin->thrustIn 
+angulateSecunde [label="Turn Quarte to Secunde\nThrust Long" fillcolor=blue]
+putByToLeftTOT [label="Put By to the left\nKeep tip on target" fillcolor=red]
+thrustIn->putByToLeftTOT
+putByToLeftTOT->angulateSecunde 
+passereSecunde [label="Turn Quarte to Secunde\nPassere" fillcolor=blue]
+putByToLeftTTL [label="Put By to the left\ntip points left" fillcolor=red]
+thrustIn->putByToLeftTTL
+putByToLeftTTL->passereSecunde 
+passereQuarte [label="Drop point under arm within\nPasser" fillcolor=blue]
+putByUp [label="Put By upwards" fillcolor=red]
+thrustIn->putByUp
+putByUp->passereQuarte 
+
+stringerWithout [label="Stringer Without" fillcolor=blue]  // node E
+openWithout->stringerWithout
+thrustQuarteOnWeak [label="Thrust in Quarte\nagainst Foible\nthen Stringere within" fillcolor=blue]
+thrustWithin [label="Thrust Within" fillcolor=red]
+stringerWithout->thrustWithin
+thrustWithin->thrustQuarteOnWeak
+
+findaWithin [label="Make a Finda Within" fillcolor=blue]
+stringerWithout2 [label="Stringere Without" fillcolor=red]
+onGuard->stringerWithout2
+stringerWithout2->findaWithin
+thrustToRightFlank [label="Drop tip\nThrust Quarte under right arm" fillcolor=blue]
+parryLeftOut [label="Parry to left side out" fillcolor=red]
+findaWithin->parryLeftOut
+parryLeftOut->thrustToRightFlank
+
+thrustSecundeAgainstWeak [label="Thrust Secunde/Terts\nover arm, against foible" fillcolor=blue]
+onGuard->openWithout
+openWithout->thrustSecundeAgainstWeak
+reversi [label="Turn to Quarte\nand thrust home" fillcolor=blue]
+putByQuarte [label="put by with Quarte" fillcolor=red]
+thrustSecundeAgainstWeak->putByQuarte
+putByQuarte->reversi
+disarm [label="Place left hand \ninside of sword\nturn away to the left side" fillcolor=blue]
+getHit [label="get hit" fillcolor=red]
+reversi->getHit
+getHit->disarm
+}

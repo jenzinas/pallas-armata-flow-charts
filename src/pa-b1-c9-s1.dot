@@ -1,0 +1,47 @@
+digraph pallas_armata_flowchart {
+
+	rankdir=LR;
+
+onGuard [label="On Guard"]      // Starting position
+stringerWithin [label="Stringer Within"]  // node E
+counterThrust [label="CounterThrust in Tertz\nover the weak\nhilt low to prevent a cavere"]  // node E
+
+onGuard->stringerWithin [label="In High Secunde, Open Within"]
+stringerWithin->counterThrust [label="Cavere and thrust without\nabove the right arm"]
+
+stringerTertz [label="stringere within, mid-Rapier\nwith a bended arm in a Tertz, so the point of thy Rapier upwards, hilt low"];
+thrustUnder [label=" changing thy Tertz into a Secunde or Prime\nunder his right arm\nnot touching his Rapier"]
+
+onGuard->stringerTertz [label="In High Secunde, Open Within"]
+stringerTertz->thrustUnder [label="Cavere and thrust without\nabove the right arm"]
+
+stringereWithout [label="Stringere Without"]
+passereSecunde [label="Drop tip to secunde close to his blade\npassere with secunde to right thigh"]
+
+onGuard->stringereWithout [label="Open Without"]
+stringereWithout->passereSecunde [label="Thrust Within"]
+
+tertzToHilt [label="Take tertz under his rapier\npoiny at his hilt"]
+thrustSecunde [label=" thrust Secunde contra-tempo\nat the outside of his Rapier\nover his right arm"]
+
+onGuard->tertzToHilt [label="Floating guard in high secunde"]
+tertzToHilt->thrustSecunde [label="Any Thrust"]
+
+stringerOutside [label="Stringere him at the outside of his Rapier\nand stringering go towards thy right side \nabout like in a Circle"]
+voltere [label="Voltere with the Quarte"]
+ 
+onGuard->stringerOutside [label="in middle Secunde, the point of his Rapier\nlook quite towards his right side out"]
+stringerOutside->voltere [label="Thrust Within"]
+
+finda [label = "Finda at his face with a Tertz upward"]
+findaPassere [label="passere"]
+findaCoupe [label="lift thy point over his point\nand thrust him with a Quarte within"]
+findaCavere [label="caver under his parere\nthrust quarte"]
+
+onGuard->finda [label="in middle Secunde, the point of his Rapier"]
+finda->findaPassere [label="Parry upward"]
+finda->findaCoupe [label="Put by with quarte to inside"]
+finda->findaCavere [label="Put by with quarte to inside"]
+
+
+}

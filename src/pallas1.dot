@@ -1,0 +1,47 @@
+digraph pallas_armata_flowchart {
+
+onGuard [label="On Guard"]      // Starting position
+stringerIn [label="Stringer Within"]  // node E
+extendInThird [label="Counterthrust Tertz\nover right arm"]
+passiere [label="Turn Tertz into Prime\nthrust atright breast"]
+
+//note this is as Silver from the Stocatta ward. 
+onGuard->stringerIn [label="Open within"] // edge B->E
+stringerIn->extendInThird [label="Thrusts Without"]
+extendInThird->passiere [label="Put By \nto the Right Side"]
+
+parryQuartWithoutThrust [label="Parry Quart Without\nQuart to Second\nThrust at right breast"]
+stringerIn->parryQuartWithoutThrust [label="Thrust without over Prime"]
+
+parryQuartWithoutPass [label="Parry Quart Without\nQuart to Second\nPassere"]
+stringerIn->parryQuartWithoutPass [label="Thrust without over Prime"]
+
+thrustWithout [label="Thrust Second\nOver Right Arm"]  // node E
+onGuard->thrustWithout [label="Open without"] // edge B->E
+
+thrustIn [label="Thrust Quarte Within"]
+onGuard->thrustIn [label="Open within"] // edge B->E
+angulateSecunde [label="Turn Quarte to Secunde\nThrust Long"]
+thrustIn->angulateSecunde [label="Put By to the left\nKeep tip on target"]
+passereSecunde [label="Turn Quarte to Secunde\nPassere"]
+thrustIn->passereSecunde [label="Put By to the left\ntip points left"]
+passereQuarte [label="Drop point under arm within\nPasser"]
+thrustIn->passereQuarte [label="Put By upwards"]
+
+stringerWithout [label="Stringer Without"]  // node E
+onGuard->stringerWithout [label="Open without"] // edge B->E
+thrustQuarteOnWeak [label="Thrust in Quarte\nagainst Foible\nthen Stringere within"]
+stringerWithout->thrustQuarteOnWeak [label="Thrust Within"]
+
+findaWithin [label="Make a Finda Within"]
+onGuard->findaWithin [label="Stringere Without"]
+thrustToRightFlank [label="Drop tip\nThrust Quarte under right arm"]
+findaWithin->thrustToRightFlank [label="Parry to left side out"]
+
+thrustSecundeAgainstWeak [label="Thrust Secunde/Terts\nover arm, against foible"]
+onGuard->thrustSecundeAgainstWeak [label="Open Without"]
+reversi [label="Turn to Quarte\nand thrust home"]
+thrustSecundeAgainstWeak->reversi [label="put by with Quarte"]
+disarm [label="Place left hand \ninside of sword\nturn away to the left side"]
+reversi->disarm [label="get hit"]
+}

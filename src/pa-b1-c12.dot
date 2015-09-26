@@ -1,0 +1,22 @@
+digraph pallas_armata_flowchart {
+
+rankdir=LR; 
+//chapter 12: how to respod to faints
+
+onGuard [label="On Guard"]
+
+ignore [label="Extend your arm and advance upon him"]
+parere [label="Parere according to the 7th and 8th chapters"]
+caverwithout [label="Caver under and thrust Secunde without"]
+caverwithin [label="Caver under and thrust Quarte within"]
+tertz [label="hold thy Rapier in a low Tertz\nwith a straight arm downwards near thy knee"]
+thrust [label="thrust Secunde contra-tempo\noutside of his Rapier over his right arm"]
+
+onGuard->ignore [label="finda multiple times"]
+ignore->parere [label="thrust within or without"]
+ignore->caverwithout [label="put by thrust to the inside"]
+ignore->caverwithin [label="put bu thrus to the outside"]
+onGuard->tertz [label="finda multiple times"]
+tertz->thrust [label="make a thrust"]
+
+}

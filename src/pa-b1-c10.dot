@@ -1,0 +1,26 @@
+digraph pallas_armata_flowchart {
+
+rankdir=LR; 
+//chapter 10, escaping the Passada
+
+onGuard [label="On Guard"]
+
+parryWithout [label="Parry Thrust Without as in Chapter 7"]
+parryWithin [label="Parry Thrust Within as in Chapter 8"]
+onGuard->parryWithout [label="Thrust without"]
+onGuard->parryWithin [label="Thrust within"]
+
+parryUpward [label="Parry the attack upwards\nto draw a Passada"]      // Starting position
+onGuard->parryUpward [label="Thrust"]
+voltereQuarte [label="Voltere with a Quarte"]
+parryUpward->voltereQuarte [label="Drop point to Passade Without"]
+
+passadeWithout [label="Drop point in Secunde\nparry to the right side\npasade without under his rapier"]
+parryUpward->passadeWithout [label="Drop point to Passade Without"]
+
+stepBack [label="Step back and pull weight onto back leg\ncavere to the left\npassere without under his weapon"]
+parryUpward->stepBack [label="Drop point to Passade Without"]
+
+crossStepBack [label="Step back with the Right leg behind the left\nparry thrust to the right with the left hand\nthrust secunde at his right breast"]
+parryUpward->crossStepBack [label="Drop point to Passade Without"]
+}

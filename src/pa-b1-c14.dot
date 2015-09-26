@@ -1,0 +1,45 @@
+digraph pallas_armata_flowchart {
+
+rankdir=LR; 
+//chapter 14: Observations against Chapter 7.
+
+onGuard [label="On Guard"]
+
+onGuard->thrustWithout [label="lie open without"]
+
+thrustWithout [label="Thrust without, over the Prime, near the hilt"]
+
+thrustWithout->hangingQuarte [label="parere with Quarte, to the right side out"]
+
+hangingQuarte [label="Drop the tip into a hanging Quarte\nwith the strong of your rapier\ntouching the weak of his\nand thrust to the right thigh"]
+
+thrustWithout->hangingSecunde [label="parere with Quarte, to the right side out"]
+
+hangingSecunde [label="drop tip into a hanging Secunde and\nthrust within at his right thigh"]
+
+thrustWithout->stepAndStringer [label="parere with Quarte, to the right side down"]
+
+stepAndStringer [label="stepping towards thy left side with thy left foot\nlift the Hilt of thy Rapier over the weakest part of his weapon\nthough close to it\nand let thy Hilt sink down at the outside of his Rapier\nand stringere him, or thrust if thou pleases\nThis may likewise be used in the fifth Chapter"]
+
+onGuard->thrustWithoutWeak [label="lie open without"]
+
+thrustWithoutWeak [label="Thrust without, over the Weak"]
+
+thrustWithoutWeak->dropToPassere [label="Caver to the right side under the blade\nfor to thrust quarte within"]
+
+dropToPassere [label="let the point of thy Rapier\nsink down into a hanging Secunde\nat the outside of his Rapier\nand break his cavereing\nthen at an instant Passere him\nat the outside under his Rapier"]
+
+thrustWithoutWeak->thighThrust [label="Caver to the right side under the blade\nfor to thrust quarte within"]
+
+thighThrust [label="change thy Secunde into a hanging Quarte, \nand letting thy point sink down\n at the inside of his Rapier \nthrust him with the said Quarte\n at his right thigh."]
+
+thrustWithoutWeak->battiere [label="Caver to the right side under the blade\nfor to thrust quarte within"]
+
+battiere [label=" stay thy intended thrust \nand battiere him at the inside of his Rapier\n with thy Rapier,\n and thrust him at the same instant\n thou battierest with a Quarte\n at the inside of his weapon,\n at his right breast"]
+
+thrustWithoutWeak->counterCavere [label="Caver to the right side under the blade\nfor to thrust quarte within"]
+
+counterCavere [label="cavere thou at the self-same time\ntowards thy left side \nunder his Rapier when he doth cavere\n and thrust him with a Secunde\nat the outside of his Rapier\n at his right breast"]
+
+
+}

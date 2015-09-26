@@ -1,0 +1,18 @@
+digraph pallas_armata_flowchart {
+
+	rankdir=LR;
+
+onGuard [label="On Guard" fillcolor=blue]      // Starting position
+caver [label="Caver" fillcolor=blue]  // node E
+parere [label="Parere" fillcolor=blue]  // node E
+caverAndStep [label="Caver and Step back\nwith the left leg" fillcolor=blue] 
+
+attackFoible [label="Attack against the foible" fillcolor=red]
+attackForte [label="Attack against the forte" fillcolor=red]
+onGuard->attackFoible
+attackFoible->caver 
+onGuard->attackForte
+attackForte->parere 
+attackForte->caverAndStep 
+
+}

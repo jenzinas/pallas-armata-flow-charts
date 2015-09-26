@@ -1,0 +1,19 @@
+digraph pallas_armata_flowchart {
+
+rankdir=LR; 
+//chapter 13: what to do when you have stringered someone, or look at his sword.
+
+onGuard [label="On Guard"]
+
+stringerWithin [label="Stringere thine adversary within"]
+
+onGuard->stringerWithin [label="lie open within"]
+
+stepIn [label="stepping in with thy right leg\n put by his thrust downwards\ntowards thy right side\nthen let thy Rapier rest at the outside of his Rapier\nand stringere him without"]
+
+stringerWithin->stepIn [label="makes a thrust at the outside of thy Rapier\nover thy right arm"]
+
+stringereWithout [label="step in towards him\nwith thy left leg before thy right leg\n and put that thrust by towards thy left side \nresting likewise with thy weapon at the inside of his Rapier \ntill that he be in thy mensure or reach, \nand then thrust where thou pleasest"]
+
+stepIn->stringereWithout [label="steps back and will make a thrust at thee within"]
+}

@@ -1,0 +1,60 @@
+digraph pallas_armata_flowchart {
+
+	rankdir=LR;
+
+onGuard [label="On Guard" fillcolor=blue]      // Starting position
+
+stringereWithout [label="Stringer Without" fillcolor=blue]
+
+parereSecunde [label="parere with hanging secunde" fillcolor=blue]
+
+openWithout [label="open without" fillcolor=red]
+
+onGuard->openWithout
+openWithout->stringereWithout 
+thighThrust [label="thrust outside at the thigh" fillcolor=red]
+
+stringereWithout->thighThrust
+thighThrust->parereSecunde 
+noCaver [label="Does not caver the parry" fillcolor=red]
+parereSecunde->noCaver
+noCaver->thrustHome
+
+
+stringerWithin [label="Stringer Within" fillcolor=blue fillcolor=blue]
+parere [label="Parere to the right\nby turning the hand to quarte" fillcolor=blue]
+thrustHome [label="turn hand to secunde\nand lunge outside to breast" fillcolor=blue] 
+
+openWithin  [label="Open within" fillcolor=red]
+onGuard->openWithin
+openWithin->stringerWithin
+thrustWithout [label="Thrust without\nover the right arm\nagainst the Forte" fillcolor=red]
+stringerWithin->thrustWithout
+thrustWithout->parere
+
+parere->noCaver
+
+parere2 [label="keep hand in third\nlift tip a little and extend arm" fillcolor=blue]
+
+thrustWithout->parere2 
+parere2->noCaver
+
+advanceParere [label="advance and parere without\nwith quarte, downwards to the right" fillcolor=blue] 
+longThrustWithout  [label="long thrust without" fillcolor=red]
+stringerWithin->longThrustWithout
+longThrustWithout->advanceParere
+advanceParere->noCaver
+
+
+caver1 [label="Caver to the inside\nbattier inside\nthrust quarte to the breast" fillcolor=blue]
+foibleThrustWithout [label="Thrust without\nover the right arm\nagainst the foible" fillcolor=red]
+stringerWithin->foibleThrustWithout
+foibleThrustWithout->caver1 
+quarte [label="Parere with a Hanging Quarte\nthen thrust to the thigh" fillcolor=blue]
+foibleThrustWithout->quarte
+
+
+
+
+
+}

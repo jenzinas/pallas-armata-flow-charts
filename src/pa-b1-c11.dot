@@ -1,0 +1,17 @@
+digraph pallas_armata_flowchart {
+
+rankdir=LR; 
+//chapter 11: remedies for the volte
+
+onGuard [label="On Guard"]
+
+thrustOver [label="Thrust Secunde over right arm\nat his right side\nif he volteres, he endangers his own life."]
+counter1 [label="Drop tip into hanging quarte\nmake a long thrust inside his rapier\nat his right thigh"]
+counter2 [label="Voltere contra-tempo\nand thrust at his right breast"]
+counter3 [label="LEt your hilt go to his foible\nthen with point upright\nthrust at his back"]
+
+onGuard->thrustOver [label="Thrust without"]
+onGuard->counter1 [label="Voltere"]
+onGuard->counter2 [label="Voltere"]
+onGuard->counter3 [label="Voltere within"]
+}

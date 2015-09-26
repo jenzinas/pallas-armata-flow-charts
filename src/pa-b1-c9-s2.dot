@@ -1,0 +1,42 @@
+digraph pallas_armata_flowchart {
+
+	rankdir=LR;
+//chapter 9, second 2, against the Tertz
+onGuard [label="On Guard"]      // Starting position
+findaWithin [label="Make a finda within"]  // node E
+cavereAndThrust [label="Cavere to the left and \nthrust quarte without"]  // node E
+findaThrust [label="Thrust Quarte within"] 
+parereFinda [label="turn Quarte to secunde and Passere"]
+
+
+onGuard->findaWithin [label="High Tertz with a bended arm\npoint upright"]
+findaWithin->cavereAndThrust [label="put by to the left side"]
+findaWithin->findaThrust [label="Ignore Finda"]
+findaThrust->parereFinda [label="put by to the right side"]
+
+cavereQuarte [label="caverest to the right and\nthrust quarte within"]
+onGuard->cavereQuarte [label="Lift tip over rapier\n to thrust without"]
+
+circleStringer [label="stringere within and step left\nas it were in a circle"]
+bowPass [label="bow thy body and\nnot touching his rapier\npass behind him under his right arm"]
+
+onGuard->circleStringer [label="lie in tertz with a straight arm"]
+circleStringer->bowPass [label="thrust Without"]
+
+stringereWithinUp [label="Stringere Within and \nfinda at his face in quarte"]
+redoublement [label="Drop the tip under the arm and\npass behind him"]
+
+stringereWithinDown [label="Stringere Within and \nfinda at the belly"]
+cavereSecunde [label="cavere to the left and \nthrust secunde over his right arm"]
+
+onGuard->stringereWithinUp [label="lie in tertz"]
+stringereWithinUp->redoublement [label="catch after the finda\nupwards"]
+
+onGuard->stringereWithinDown [label="lie in tertz"]
+stringereWithinDown->cavereSecunde [label="catch after the finda\ndownwards"]
+
+
+
+
+
+}
